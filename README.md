@@ -1,0 +1,2 @@
+# hostinger-api
+Hostinger API
