@@ -1,25 +1,33 @@
 <?php
+
 namespace Hostinger\Services;
 
 use Hostinger\Services\Traits\VM;
+use Hostinger\Services\Traits\PublicKeys;
 
-class Hostinger {
+/**
+ * Hostinger API client
+ */
+class Hostinger
+{
+    // Inclui métodos de Virtual Machines e Public Keys
     use VM;
+    use PublicKeys;
 
     /**
-     * Hostinger token
-     * 
+     * API token para autenticação
+     *
      * @var string
      */
     private string $token;
 
     /**
-     * Constructs the class passing the token to the private property
-     * 
+     * Construtor: recebe o token de acesso
+     *
      * @param string $token
-     * @return void
      */
-    public function __construct(string $token) {
+    public function __construct(string $token)
+    {
         $this->token = $token;
     }
 }

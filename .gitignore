@@ -1,0 +1,9 @@
+# Dependências instaladas pelo Composer
+/vendor/
+
+# Variables de ambiente, se existir
+/.env
+
+# IDE/editor
+/.vscode/
+/.idea/

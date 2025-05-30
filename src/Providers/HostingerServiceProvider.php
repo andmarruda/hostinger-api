@@ -13,10 +13,11 @@ class HostingerServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(
-            __DIR__ . '/../config/hostinger.php',
-            'hostinger'
-        );
+        // permite publicar config via artisan
+         $this->publishes([
+        __DIR__ . '/../config/hostinger.php' => config_path('hostinger.php'),
+        ], 'hostinger-config');
+
     }
 
     /**
